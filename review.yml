@@ -1,0 +1,88 @@
+aid: city-national-bank
+name: City National Bank
+review:
+  question: Does City National Bank expose a first-party public developer portal or documented public API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    City National Bank (cnb.com), a national bank chartered in the United States
+    and a wholly owned subsidiary of Royal Bank of Canada, publishes NO
+    first-party public developer portal and NO documented public API. URL probes
+    on the review date returned: developer.cnb.com -> no DNS resolution (curl
+    exit / HTTP 000), developers.cnb.com -> no DNS resolution (000), and
+    api.cnb.com -> HTTP 404. The public marketing site www.cnb.com returns HTTP
+    200 but links no developer documentation, no API reference, and no
+    downloadable OpenAPI/Swagger specification. Business "software solutions"
+    (AgilLink for bill pay, Payment Hub by Exactuals for payments) are described
+    only as end-user products with no public API surface. No OpenAPI or Swagger
+    definition was harvested because none is publicly available. There is no
+    first-party authentication surface to characterize (no OAuth2/OIDC, API-key,
+    or mTLS developer program is published).
+  openFinancePosture:
+    firstPartyDeveloperPortal: false
+    developerPortalUrl: ""
+    downloadableSpec: false
+    specProvenance: none
+    authModel: none-published
+    fdxParticipant: not-documented
+    section1033Posture: >-
+      City National is a covered depository institution under the CFPB Section
+      1033 Personal Financial Data Rights rule (finalized Oct 2024, subject to
+      ongoing legal challenge), but no City-National-specific 1033 data-access
+      posture or FDX-conformant API is publicly documented.
+    aggregatorAccess: >-
+      Consumer-permissioned account data is reached through third-party
+      aggregators (Plaid, MX, Finicity, Akoya) rather than a direct City National
+      API. This is the honest, aggregator-only reality for this institution.
+    parentPortalNote: >-
+      Parent Royal Bank of Canada operates a separate developer portal at
+      developer.rbc.com (HTTP 200) under a different Canadian charter; it does not
+      expose City National Bank APIs and is out of scope for this US charter.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented for City National Bank.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket surface is documented.
+  probes:
+    - url: https://developer.cnb.com
+      status: 000
+      note: No DNS resolution; host does not exist.
+    - url: https://developers.cnb.com
+      status: 000
+      note: No DNS resolution; host does not exist.
+    - url: https://api.cnb.com
+      status: 404
+      note: Host resolves but returns Not Found; no documented API root.
+    - url: https://www.cnb.com
+      status: 200
+      note: Public marketing site; no developer or API resources linked.
+    - url: https://developer.rbc.com
+      status: 200
+      note: Parent RBC developer portal, separate Canadian charter; not City National APIs.
+sources:
+  - url: https://www.cnb.com/
+    type: Website
+    note: Corporate homepage; no developer/API links.
+  - url: https://www.cnb.com/about-us.html
+    type: About
+    note: Confirms RBC ownership, FDIC membership, and positioning.
+  - url: https://www.cnb.com/business-banking/software-solutions.html
+    type: Documentation
+    note: AgilLink and Payment Hub by Exactuals described as products only; no public API.
+  - url: https://en.wikipedia.org/wiki/City_National_Bank_(California)
+    type: Reference
+    note: Background on charter, RBC subsidiary status, and scale.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No public API surface exists, so apis[] is empty and no OpenAPI was harvested.
+    The record is an honest identity-only (built-stub) profile: City National Bank
+    participates in US open finance, if at all, only through consumer-permissioned
+    data aggregators, not a first-party developer API.

@@ -1,0 +1,56 @@
+aid: city-national-bank
+url: https://raw.githubusercontent.com/api-evangelist/city-national-bank/refs/heads/main/apis.yml
+name: City National Bank
+kind: company
+description: >-
+  City National Bank is a national bank chartered in the United States and a
+  wholly owned subsidiary of Royal Bank of Canada (RBC) since 2015, headquartered
+  in Los Angeles, California and known historically as "the bank to the stars"
+  for its deep roots in the entertainment industry. With roughly $98 billion in
+  assets, it is an FDIC-insured, super-regional institution offering personal,
+  business, and private banking, wealth management, treasury management, and
+  capital markets services, with industry expertise across entertainment,
+  healthcare, real estate, technology, and law. City National operates as CN Bank
+  in Florida. It runs NO first-party public developer portal or documented public
+  API: developer.cnb.com and developers.cnb.com do not resolve and api.cnb.com
+  returns 404. Consistent with the voluntary, fragmented US open-finance model,
+  consumer-permissioned account data is reached through third-party aggregators
+  (Plaid, MX, Finicity, Akoya) rather than a direct City National API. As a
+  covered depository institution it falls under the emerging CFPB Section 1033
+  Personal Financial Data Rights rule, but no City-National-specific 1033 or FDX
+  participation posture is publicly documented. Its Canadian parent RBC runs a
+  separate developer portal (developer.rbc.com) under a different charter that
+  does not expose City National Bank APIs.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Super-Regional Bank
+- National Bank
+- Private Banking
+- Wealth Management
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.cnb.com/
+- type: About
+  url: https://www.cnb.com/about-us.html
+- type: Blog
+  url: https://www.cnb.com/personal-banking/insights.html
+- type: PrivacyPolicy
+  url: https://www.cnb.com/privacy.html
+- type: TermsOfService
+  url: https://www.cnb.com/legal.html
+- type: Support
+  url: https://www.cnb.com/contact-us.html
+- type: LinkedIn
+  url: https://www.linkedin.com/company/city-national-bank
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
