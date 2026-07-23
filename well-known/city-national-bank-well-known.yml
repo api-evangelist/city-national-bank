@@ -1,0 +1,42 @@
+generated: '2026-07-23'
+method: searched
+source: live probes of /.well-known/* on City National Bank hosts
+host: https://www.cnb.com
+note: >-
+  No machine-readable discovery documents are published. City National Bank
+  runs no first-party developer API, so no OpenID/OAuth metadata or API
+  catalog is exposed. /security.txt issues a 302 to an internal redirect
+  path that resolves to 404 (not a valid RFC 9116 document); the real
+  responsible-disclosure surface is the HTML page indexed in
+  security/city-national-bank-vulnerability-disclosure.yml.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /security.txt
+  status: 302
+  note: redirects to /utilities/redirects/privacy-security-rd.txt which 404s
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/gpc.json
+  status: 404
+- path: /llms.txt
+  status: 404
+api_host:
+  host: https://api.cnb.com
+  documents:
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /v1/openapi.json
+    status: 400
+  - path: /api-docs
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404

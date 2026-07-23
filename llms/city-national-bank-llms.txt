@@ -1,0 +1,29 @@
+# City National Bank
+
+> City National Bank is a national bank chartered in the United States and a wholly owned subsidiary of Royal Bank of Canada (RBC), headquartered in Los Angeles and known historically as "the bank to the stars." It offers personal, business, and private banking, wealth management, treasury management, and capital markets services. City National runs NO first-party public developer portal or documented public API — consumer-permissioned account data is reached only through third-party aggregators (Plaid, MX, Finicity, Akoya).
+
+## About
+
+- [Website](https://www.cnb.com/): Corporate homepage.
+- [About City National Bank](https://www.cnb.com/about-us.html): Confirms RBC ownership, FDIC membership, and positioning.
+- [Insights (Blog)](https://www.cnb.com/personal-banking/insights.html): Personal banking insights and articles.
+
+## Products & Services
+
+- [Software Solutions](https://www.cnb.com/business-banking/software-solutions.html): AgilLink (bill pay) and Payment Hub by Exactuals, described as end-user products with no public API surface.
+- [Online Banking](https://www.cnb.com/personal-banking/online-banking.html): Online banking enrollment and login.
+- [Treasury Management](https://www.cnb.com/business-banking/treasury-management.html): Payments, receivables, liquidity, and reporting for businesses.
+
+## Security & Legal
+
+- [Privacy & Security](https://www.cnb.com/privacy-security.html): Responsible Disclosure program; directs researchers to the RBC Responsible Disclosure process for RBC-owned products and systems.
+- [RBC Responsible Disclosure](https://www.rbc.com/cyber-security/responsible-disclosures/index.html): Parent-group vulnerability reporting process City National defers to.
+- [Privacy Policy](https://www.cnb.com/privacy.html)
+- [Legal / Terms](https://www.cnb.com/legal.html)
+- [Contact / Support](https://www.cnb.com/contact-us.html)
+
+## API posture
+
+- No first-party public API. Probes on 2026-07-23: developer.cnb.com and developers.cnb.com do not resolve; api.cnb.com returns 404; no OpenAPI/Swagger at any host root; no /.well-known/ discovery documents; no /llms.txt.
+- As a covered depository institution, City National falls under the CFPB Section 1033 Personal Financial Data Rights rule, but no institution-specific 1033 or FDX participation posture is publicly documented.
+- Parent RBC operates a separate developer portal (developer.rbc.com) under a different Canadian charter that does not expose City National Bank APIs.
