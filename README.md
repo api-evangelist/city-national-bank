@@ -1,4 +1,4 @@
-# City National Bank (city-national-bank)
+# City National Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,55 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-City National Bank is a US national bank and a wholly owned subsidiary of Royal Bank of Canada (RBC), headquartered in Los Angeles, California with roughly $98 billion in assets. Known historically as "the bank to the stars" for its entertainment-industry roots, it is an FDIC-insured, super-regional institution offering personal, business, and private banking, wealth management, treasury management, and capital markets services. It operates as CN Bank in Florida.
+City National Bank is a national bank chartered in the United States and a wholly owned subsidiary of Royal Bank of Canada (RBC) since 2015, headquartered in Los Angeles, California and known historically as "the bank to the stars" for its deep roots in the entertainment industry. With roughly $98 billion in assets, it is an FDIC-insured, super-regional institution offering personal, business, and private banking, wealth management, treasury management, and capital markets services, with industry expertise across entertainment, healthcare, real estate, technology, and law. City National operates as CN Bank in Florida. It runs NO first-party public developer portal or documented public API: developer.cnb.com and developers.cnb.com do not resolve and api.cnb.com returns 404. Consistent with the voluntary, fragmented US open-finance model, consumer-permissioned account data is reached through third-party aggregators (Plaid, MX, Finicity, Akoya) rather than a direct City National API. As a covered depository institution it falls under the emerging CFPB Section 1033 Personal Financial Data Rights rule, but no City-National-specific 1033 or FDX participation posture is publicly documented. Its Canadian parent RBC runs a separate developer portal (developer.rbc.com) under a different charter that does not expose City National Bank APIs.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/city-national-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/city-national-bank/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Super-Regional Bank · National Bank · Private Banking · Wealth Management · Open Finance
 
-## Open Finance / API Posture
+## City National Bank on APIs.io
 
-City National Bank publishes **no first-party public developer portal and no documented public API**. Probes confirm `developer.cnb.com` and `developers.cnb.com` do not resolve, and `api.cnb.com` returns HTTP 404. Its public website (`www.cnb.com`) links no developer documentation, OpenAPI/Swagger specs, or third-party integration resources.
+Everything profiled for City National Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/city-national-bank/](https://apis.io/providers/city-national-bank/)** — or go straight to one of the APIs or properties below.
 
-Consistent with the voluntary and fragmented US open-finance model (unlike the mandated UK/AU regimes), consumer-permissioned account data from City National is reached through third-party **data aggregators** — Plaid, MX, Finicity, and Akoya — rather than a direct City National API.
+### Published properties
 
-- **First-party developer portal:** none (`developer.cnb.com` does not resolve)
-- **Downloadable OpenAPI/Swagger:** none published
-- **FDX participation:** not publicly documented for City National specifically
-- **CFPB Section 1033:** City National is a covered depository institution under the emerging Personal Financial Data Rights rule, but no City-National-specific 1033 posture page is published
-- **Aggregator access:** the honest path for consumer data (Plaid / MX / Finicity / Akoya)
-- **Parent portal:** RBC runs a separate developer portal at `developer.rbc.com` under a different (Canadian) charter that does not expose City National Bank APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Tags
+#### Security (2)
 
-- Financial Services
-- Banking
-- United States
-- Super-Regional Bank
-- National Bank
-- Private Banking
-- Wealth Management
-- Open Finance
-- Data Aggregation
+Authentication, trust centre, and vulnerability disclosure.
 
-## Timestamps
+- [City National Bank Domain Security](https://apis.io/security/city-national-bank/city-national-bank-domain-security/)
+- [City National Bank Vulnerability Disclosure](https://apis.io/security/city-national-bank/city-national-bank-vulnerability-disclosure/)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+## Where to find this API
 
-## APIs
-
-No public API products are documented by City National Bank. This is an identity-only record; data access is available to permissioned third parties via aggregators, not a first-party API.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.cnb.com/)
-- [About](https://www.cnb.com/about-us.html)
-- [Blog](https://www.cnb.com/personal-banking/insights.html)
-- [Privacy Policy](https://www.cnb.com/privacy.html)
-- [Terms of Service](https://www.cnb.com/legal.html)
 - [Support](https://www.cnb.com/contact-us.html)
-- [LinkedIn](https://www.linkedin.com/company/city-national-bank)
+- [Blog](https://www.cnb.com/personal-banking/insights.html)
+- [Security](https://www.cnb.com/privacy-security.html)
+- [Terms of service](https://www.cnb.com/legal.html)
+- [Privacy policy](https://www.cnb.com/privacy.html)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/city-national-bank/](https://apis.io/providers/city-national-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for City National Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/city-national-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
